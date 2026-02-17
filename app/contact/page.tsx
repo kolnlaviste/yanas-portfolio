@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Instagram, Linkedin } from 'lucide-react';
 import { useState } from 'react';
-import CornerPet from '../components/CornerPet';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,7 +26,6 @@ export default function Contact() {
 
   return (
     <>
-      <CornerPet type="cat" corner="top-right" />
 
       <section className="min-h-screen px-8 py-24">
         <div className="max-w-6xl mx-auto">
