@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <SideNav />
         {/* 
@@ -35,7 +35,7 @@ export default function RootLayout({
           - Tablet (md): pt-16 for top nav bar
           - Mobile: pb-16 for bottom nav bar
         */}
-        <main className="lg:ml-24 md:pt-16 lg:pt-0 pb-16 md:pb-0 min-h-screen">
+        <main className="lg:ml-24 md:pt-16 lg:pt-0 pb-16 md:pb-0 min-h-screen overflow-x-hidden w-full">
           {children}
         </main>
         <Footer />

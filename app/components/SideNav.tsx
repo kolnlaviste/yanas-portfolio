@@ -11,7 +11,8 @@ export default function SideNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { href: '/', label: 'Work' },
+    { href: '/', label: 'Home' },
+    { href: '/portfolio', label: 'Portfolio' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -91,10 +92,10 @@ export default function SideNav() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-champagne-300 items-center justify-around px-4 z-50"
+        className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-champagne-300 items-center justify-center gap-2 px-2 z-50 overflow-hidden"
       >
         <Link href="/">
-          <div className="w-8 h-8 bg-sage-500 flex items-center justify-center text-white font-bold text-sm">
+          <div className="w-8 h-8 bg-sage-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
             Y
           </div>
         </Link>
@@ -105,7 +106,7 @@ export default function SideNav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs tracking-wider uppercase transition-all duration-200 px-4 py-2 ${
+              className={`text-xs tracking-wider uppercase transition-all duration-200 px-2 py-2 flex-shrink-0 whitespace-nowrap ${
                 isActive
                   ? 'font-black text-espresso-950'
                   : 'font-semibold text-espresso-300 hover:text-espresso-600'

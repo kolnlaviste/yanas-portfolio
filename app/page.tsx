@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section id="work" className="px-6 md:px-12 py-24">
-        <div className="max-w-7xl mx-auto">
+      <section id="work" className="px-8 py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <p className="text-xs uppercase tracking-widest text-sage-600 font-bold mb-4">
-              Selected Projects
+              What I Offer
             </p>
-            <h2 className="heading-lg">Recent Work</h2>
+            <h2 className="heading-lg">Services & Specialties</h2>
             <div className="w-24 h-1 bg-sage-500 mt-4"></div>
           </div>
           <MasonryGrid />

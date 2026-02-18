@@ -63,13 +63,24 @@
   body {
     background-color: white;
     color: var(--color-espresso-900);
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: system-ui, -apple-system, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
     color: var(--color-espresso-950);
     font-weight: 700;
     letter-spacing: -0.02em;

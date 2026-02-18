@@ -22,8 +22,8 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-6 md:px-12 py-24">
-      <div className="max-w-5xl w-full">
+    <section className="min-h-screen flex items-center px-4 md:px-8 py-24 overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full">
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
 
           {/* Label */}
@@ -31,18 +31,18 @@ export default function Hero() {
             variants={itemVariants}
             className="text-xs uppercase tracking-widest text-sage-600 font-bold mb-6"
           >
-            Portfolio — 2024
+            Portfolio — 2026
           </motion.p>
 
-          {/* Heading - cat is inside the last line span so positioning is always relative to it */}
+          {/* Heading - cat sits on top of "gn" in Design */}
           <motion.div variants={itemVariants} className="mb-8">
             <h1 className="heading-xl">
               Social<br />
               Media<br />
-              {/* Cat lives inside this span — right edge of "& Design" */}
+              {/* Cat lives inside this span — positioned on "gn" */}
               <span className="relative inline-block whitespace-nowrap">
                 & Design
-                <CatOnTop size={120} mobileSize={70} top={-66} mobileTop={-37} right={25} mobileRight={20}/>
+                <CatOnTop size={120} mobileSize={70} top={-66} mobileTop={-37} left={285} mobileLeft={195}/>
               </span>
             </h1>
           </motion.div>
@@ -61,22 +61,22 @@ export default function Hero() {
             <a href="/contact" className="btn-secondary text-center">Get in Touch</a>
           </motion.div>
 
-          {/* Stats */}
+          {/* What I Offer */}
           <motion.div
             variants={itemVariants}
             className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-champagne-300"
           >
             <div>
-              <p className="text-3xl md:text-4xl font-black text-espresso-950 mb-1">50+</p>
-              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Projects Done</p>
+              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Brand</p>
+              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Identity Design</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-black text-espresso-950 mb-1">30+</p>
-              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Happy Clients</p>
+              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Social</p>
+              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Content & Strategy</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-black text-espresso-950 mb-1">3+</p>
-              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Years Experience</p>
+              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Custom</p>
+              <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Solutions</p>
             </div>
           </motion.div>
 
