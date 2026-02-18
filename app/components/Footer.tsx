@@ -19,14 +19,14 @@ export default function Footer() {
                 Y
               </div>
               <p className="text-xs uppercase tracking-wider text-espresso-500 font-semibold">
-                © 2024 Yana. All Rights Reserved.
+                © 2026 Yana. All Rights Reserved.
               </p>
             </div>
 
             {/* Right: Social Links */}
             <div className="flex gap-3">
               <a
-                href="https://instagram.com/yana"
+                href="https://instagram.com/yanallaguno"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -35,7 +35,7 @@ export default function Footer() {
                 <Instagram size={16} />
               </a>
               <a
-                href="https://linkedin.com/in/yana"
+                href="https://www.linkedin.com/in/aeannah-llaguno/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -44,16 +44,7 @@ export default function Footer() {
                 <Linkedin size={16} />
               </a>
               <a
-                href="https://facebook.com/yana"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="w-10 h-10 border-2 border-espresso-200 flex items-center justify-center text-espresso-400 hover:bg-sage-500 hover:border-sage-500 hover:text-white transition-all duration-200"
-              >
-                <Facebook size={16} />
-              </a>
-              <a
-                href="mailto:hello@yana.com"
+                href="mailto:yana.llaguno815@gmail.com"
                 aria-label="Email"
                 className="w-10 h-10 border-2 border-espresso-200 flex items-center justify-center text-espresso-400 hover:bg-sage-500 hover:border-sage-500 hover:text-white transition-all duration-200"
               >
