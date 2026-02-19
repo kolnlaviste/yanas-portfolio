@@ -28,14 +28,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        suppressHydrationWarning
       >
         <SideNav />
         {/*
-          - Use `site-main` to apply the left padding on large screens for the fixed side nav
-          - Tablet (md): pt-16 for top nav bar
-          - Mobile: pb-16 for bottom nav bar
+          Responsive spacing:
+          - Mobile & Tablet: pt-16 (top hamburger nav)
+          - Desktop: ml-24 (sidebar space)
         */}
-        <main className="site-main md:pt-16 lg:pt-0 pb-16 md:pb-0 min-h-screen overflow-x-hidden w-full">
+        <main className="pt-16 lg:pt-0 lg:ml-24 min-h-screen overflow-x-hidden w-full">
           {children}
         </main>
         <Footer />

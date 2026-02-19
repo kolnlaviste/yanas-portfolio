@@ -22,7 +22,7 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-4 md:px-8 py-24 overflow-hidden">
+    <section className="min-h-screen flex items-center px-6 md:px-8 py-24">
       <div className="max-w-6xl mx-auto w-full">
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
 
@@ -42,6 +42,7 @@ export default function Hero() {
               {/* Cat lives inside this span — positioned on "gn" */}
               <span className="relative inline-block whitespace-nowrap">
                   & Design
+                  {/* Cat on all screen sizes */}
                   <span className="cat-anchor">
                     <CatOnTop size={120} mobileSize={70} left={276} mobileLeft={197} offsetX={46} offsetY={-32} mobileOffsetX={40} mobileOffsetY={-42} />
                   </span>
@@ -50,34 +51,34 @@ export default function Hero() {
           </motion.div>
 
           {/* Divider */}
-          <motion.div variants={itemVariants} className="w-24 h-1 bg-sage-500 mb-8" />
+          <motion.div variants={itemVariants} className="w-24 h-1 bg-sage-500 mb-6" />
 
           {/* Description */}
-          <motion.p variants={itemVariants} className="body-text max-w-xl mb-12">
+          <motion.p variants={itemVariants} className="body-text max-w-xl mb-10">
             Strategic social media management and brand design for businesses that want to stand out.
           </motion.p>
 
           {/* Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 mb-16">
             <a href="#work" className="btn-primary text-center">View Work</a>
             <a href="/contact" className="btn-secondary text-center">Get in Touch</a>
           </motion.div>
 
-          {/* What I Offer */}
+          {/* What I Offer - stack on mobile */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-champagne-300"
+            className="flex flex-col sm:grid sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-champagne-300"
           >
-            <div>
-              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Brand</p>
+            <div className="text-center sm:text-left">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-black text-sage-600 mb-2">Brand</p>
               <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Identity Design</p>
             </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Social</p>
+            <div className="text-center sm:text-left">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-black text-sage-600 mb-2">Social</p>
               <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Content & Strategy</p>
             </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-black text-sage-600 mb-1">Custom</p>
+            <div className="text-center sm:text-left">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-black text-sage-600 mb-2">Custom</p>
               <p className="text-xs uppercase tracking-wider text-espresso-400 font-semibold">Solutions</p>
             </div>
           </motion.div>
