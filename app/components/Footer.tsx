@@ -5,7 +5,7 @@ import WalkingDog from './WalkingDog';
 
 export default function Footer() {
   return (
-    <footer className="lg:ml-24 relative">
+    <footer className="relative">
       {/* Dog walks along this line — it's the footer top border */}
       <div className="border-t border-champagne-300 relative">
         <WalkingDog />

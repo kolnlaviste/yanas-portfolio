@@ -30,12 +30,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <SideNav />
-        {/* 
-          - Desktop (lg): ml-24 for side nav
+        {/*
+          - Use `site-main` to apply the left padding on large screens for the fixed side nav
           - Tablet (md): pt-16 for top nav bar
           - Mobile: pb-16 for bottom nav bar
         */}
-        <main className="lg:ml-24 md:pt-16 lg:pt-0 pb-16 md:pb-0 min-h-screen overflow-x-hidden w-full">
+        <main className="site-main md:pt-16 lg:pt-0 pb-16 md:pb-0 min-h-screen overflow-x-hidden w-full">
           {children}
         </main>
         <Footer />
