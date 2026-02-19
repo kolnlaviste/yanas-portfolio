@@ -41,8 +41,10 @@ export default function Hero() {
               Media<br />
               {/* Cat lives inside this span — positioned on "gn" */}
               <span className="relative inline-block whitespace-nowrap">
-                & Design
-                <CatOnTop size={120} mobileSize={70} top={-66} mobileTop={-37} left={285} mobileLeft={195}/>
+                  & Design
+                  <span className="cat-anchor">
+                    <CatOnTop size={120} mobileSize={70} left={276} mobileLeft={197} offsetX={46} offsetY={-32} mobileOffsetX={40} mobileOffsetY={-42} />
+                  </span>
               </span>
             </h1>
           </motion.div>

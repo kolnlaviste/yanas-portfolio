@@ -51,9 +51,9 @@ export default function Portfolio() {
               Portfolio — 2026
             </p>
             <h1 className="heading-xl mb-8">
-              <span className="block relative inline-block">
+              <span className="block relative inline-block cat-anchor">
                 Featured
-                <CatOnTop size={120} mobileSize={70} top={-66} mobileTop={-37} left={185} mobileLeft={130} />
+                <CatOnTop size={120} mobileSize={70} left={180} mobileLeft={140} offsetY={-32} mobileOffsetY={-42} />
               </span>
               <span className="block">Work</span>
             </h1>

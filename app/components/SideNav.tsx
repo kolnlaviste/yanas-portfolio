@@ -70,21 +70,40 @@ export default function SideNav() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="hidden md:flex lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-champagne-300 items-center justify-between px-8 z-50"
+        className="hidden md:flex lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-champagne-300 z-50"
       >
-        <Link href="/">
-          <div className="w-10 h-10 bg-sage-500 flex items-center justify-center text-white font-bold text-lg hover:bg-sage-600 transition-colors">
-            Y
+        <div className="w-full max-w-6xl mx-auto relative h-full px-4">
+          {/* Centered links */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-8">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm tracking-wider uppercase transition-all duration-200 px-2 py-2 text-center ${
+                    isActive
+                      ? 'font-black text-espresso-950'
+                      : 'font-semibold text-espresso-300 hover:text-espresso-600'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
-        </Link>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 text-espresso-800 hover:text-sage-600 transition-colors"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Menu button: absolutely positioned right */}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-espresso-800 hover:text-sage-600 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
       </motion.nav>
 
       {/* ─── MOBILE: Bottom Navigation ─── */}
@@ -92,30 +111,35 @@ export default function SideNav() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-champagne-300 items-center justify-center gap-2 px-2 z-50 overflow-hidden"
+        className="flex md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white border-t border-champagne-300 items-center z-50 overflow-hidden"
       >
-        <Link href="/">
-          <div className="w-8 h-8 bg-sage-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-            Y
-          </div>
-        </Link>
+        {/* Centered container so nav appears balanced on small screens */}
+        <div className="w-full max-w-3xl mx-auto flex items-center justify-center gap-6 px-4">
+          <Link href="/">
+            <div className="w-8 h-8 bg-sage-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+              Y
+            </div>
+          </Link>
 
-        {links.map((link) => {
-          const isActive = pathname === link.href;
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-xs tracking-wider uppercase transition-all duration-200 px-2 py-2 flex-shrink-0 whitespace-nowrap ${
-                isActive
-                  ? 'font-black text-espresso-950'
-                  : 'font-semibold text-espresso-300 hover:text-espresso-600'
-              }`}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
+          <div className="flex items-center justify-center gap-4">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-xs tracking-wider uppercase transition-all duration-200 px-2 py-2 text-center ${
+                    isActive
+                      ? 'font-black text-espresso-950'
+                      : 'font-semibold text-espresso-300 hover:text-espresso-600'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
       </motion.nav>
 
       {/* ─── TABLET: Dropdown Menu ─── */}

@@ -53,19 +53,20 @@ export default function WalkingDog() {
       }}
     >
       {show && (
-        <div
-          style={{
-            position: 'absolute',
-            // Pull up by dog height + a little so paws sit on the footer top border
-            top: '-85px',
-            left: 0,
-            right: 0,
-            height: '100px',
-            overflow: 'hidden',
-            pointerEvents: 'none',
-            zIndex: 50,
-          }}
-        >
+          <div
+            style={{
+              position: 'absolute',
+              // Pull up by dog height + a little so paws sit on the footer top border
+              top: '-85px',
+              left: 0,
+              right: 0,
+              height: '100px',
+              overflow: 'hidden',
+              pointerEvents: 'none',
+              // lower than SideNav (z-50) so the dog appears to walk under the sidebar
+              zIndex: 40,
+            }}
+          >
           <div
             style={{
               position: 'absolute',

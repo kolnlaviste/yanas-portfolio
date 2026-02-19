@@ -24,9 +24,9 @@ export default function About() {
             <div className="relative inline-block mb-8">
               <h1 className="heading-xl">
                 Aeannah<br />
-                <span className="relative inline-block">
+                <span className="relative inline-block cat-anchor">
                   Llaguno
-                  <CatOnTop size={120} mobileSize={70} top={-157.5} mobileTop={-97.5} left={375} mobileLeft={255} />
+                  <CatOnTop size={120} mobileSize={70} left={320} mobileLeft={234} offsetY={-107} mobileOffsetY={-128} />
                 </span>
               </h1>
             </div>

@@ -40,9 +40,9 @@ export default function Contact() {
             </p>
             <h1 className="heading-xl mb-8">
               <span className="block">Let&apos;s</span>
-              <span className="block relative inline-block">
+              <span className="block relative inline-block cat-anchor">
                 Build
-                <CatOnTop size={120} mobileSize={70} top={-66} mobileTop={-37} left={110} mobileLeft={80} />
+                <CatOnTop size={120} mobileSize={70} left={175} mobileLeft={136} offsetY={44} mobileOffsetY={44.8} />
               </span>
               <span className="block">Dreams</span>
             </h1>
